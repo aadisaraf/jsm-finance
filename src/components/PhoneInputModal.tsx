@@ -81,10 +81,16 @@ export default function PhoneInputModal({ onClose, onSubmit }: PhoneInputModalPr
                 })}
                 type="tel"
                 placeholder="1234567890"
-                className={`w-full pl-12 pr-4 py-3 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 outline-none transition-colors ${
+                className={`w-full pl-12 pr-4 py-3 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 outline-none transition-colors placeholder:text-gray-400 ${
+                  phoneNumber ? 'text-[rgb(239,50,0)] [-webkit-text-fill-color:rgb(0,0,0)]' : 'text-gray-400 [-webkit-text-fill-color:theme(colors.gray.400)]'
+                } ${
                   errors.phoneNumber ? 'border-red-500' : 'border-gray-300'
                 }`}
                 maxLength={10}
+                style={{
+                  color: phoneNumber ? 'rgb(0, 0, 0)' : '#9CA3AF',
+                  WebkitTextFillColor: phoneNumber ? 'rgb(0, 0, 0)' : '#9CA3AF'
+                }}
               />
             </div>
             {errors.phoneNumber && (
