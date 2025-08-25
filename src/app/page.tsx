@@ -118,10 +118,27 @@ export default function Home() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl md:text-2xl text-black/80 mb-12 max-w-2xl"
+            className="text-xl md:text-2xl text-black/80 mb-8 max-w-2xl"
           >
             Your trusted partner for all financial solutions. Get the loan you need with competitive rates and quick approval.
           </motion.p>
+
+          {/* Phone Number Display */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="mb-8 bg-white/20 backdrop-blur-sm rounded-lg p-4"
+          >
+            <p className="text-black/70 text-sm mb-1">Call us directly:</p>
+            <a 
+              href="tel:+917509750908"
+              className="text-lg md:text-xl font-semibold text-black hover:text-teal-600 transition-colors duration-200 flex items-center justify-center gap-2"
+            >
+              <Phone className="w-4 h-4" />
+              +91 7509 7509 08
+            </a>
+          </motion.div>
 
           {/* Loan Type Buttons */}
           <motion.div
