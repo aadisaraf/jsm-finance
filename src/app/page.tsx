@@ -69,13 +69,13 @@ export default function Home() {
         {/* Navigation */}
         <nav className="p-6 flex justify-between items-center">
           <div className="flex items-center gap-3">
-            <Image
+            {/* <Image
               src="/jsm-logo.svg"
               alt="JSM Finance Logo"
               width={60}
               height={30}
               className="object-contain"
-            />
+            /> */}
           </div>
           <div className="flex gap-4">
             <motion.button
